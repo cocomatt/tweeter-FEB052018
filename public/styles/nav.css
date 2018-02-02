@@ -1,0 +1,23 @@
+#nav-bar {
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  padding: 0 2em 0 2em;
+}
+
+#nav-bar .logo {
+  float: left;
+  height: 80px;
+  width: 80px;
+  <img src="/images/bird.png">
+}
+
+#nav-bar .header {
+  float: left;
+  padding: 10px;
+  line-height: 175%;
+  justify-content: center;
+  font-size: 200%;
+  font-style: color #e8fdff;
+}
+
