@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -17,6 +18,8 @@
 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -25,31 +28,53 @@
 
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   </head>
 
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+        <button type="button" name="button"><i class="fas fa-edit" aria-hidden="true"></i>Compose</button>
     </nav>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form id="compose" method="POST" action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <form method="POST" action="/tweets">
+          <textarea id="new-tweet-area" name="text" placeholder="What are you humming about?"></textarea>
           <div class="inside">
-            <input type="submit" value="Tweet">
+            <input type="submit" value="Tweet">  <!--word wrap! -->
             <span class="counter">140</span>
           </div>
         </form>
       </section>
-      <section class="tweets">
-
+      <section class="tweets-container">
+<!--
+        <article class="tweet">
+          <header>
+            <img class="logo" src="/images/Bill-Nye.jpg">
+            <h1>Bill Nye the Science Guy</h1>
+            <h2>@BillNye</h2>
+          </header>
+          <div class="tweet-body">
+            <p>
+              Yay! Science!
+            </p>
+          </div>
+          <footer>
+            <p>
+            3 days ago
+            </p>
+            <span>
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </span>
+          </footer>
+        </article>
+-->
       </section>
     </main>
   </body>

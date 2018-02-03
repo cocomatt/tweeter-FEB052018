@@ -24,7 +24,7 @@
   display: contents;
 }*/
 
-.new-tweet textarea {
+.new-tweet #new-tweet-area {
   width: 368px;
 }
 
