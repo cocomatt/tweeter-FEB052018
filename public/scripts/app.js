@@ -118,20 +118,14 @@ function loadTweets() {
     url: `/tweets`,
     method: 'GET',
     dataType: 'json',
-    success: function (data) {
-      console.log('Success: ', data);
-      renderTweets(data);
-    }
+  }).done(function (data) {
+    renderTweets(data);
+    $('input[type=text], textarea').val('');
+    console.log('the ajax request was successfull');
   });
 }
 
 function showNotificationBar(message, duration, bgColor, txtColor, height) {
-  /*set default values*///(message, 1500, '#F4E0E1', '#A42732', 40)
-  //duration = typeof duration !== 'undefined' ? duration : 1500;
-  //bgColor = typeof bgColor !== 'undefined' ? bgColor : "#F4E0E1";
-  //txtColor = typeof txtColor !== 'undefined' ? txtColor : "#A42732";
-  //height = typeof height !== 'undefined' ? height : 40;
-  //create the notification bar div if it doesn't exist*/
   if ($('#notification-bar').size() == 0) {
       let HTMLmessage = "<div class='notification-message' style='text-align:center; line-height: " + height + "px'> " + message + " </div>";
       $('body').prepend("<div id='notification-bar' style='width:100%; height:" + height + "px; background-color: " + bgColor + "; position: fixed; z-index: 100; transition-duration: " + duration + "; color: " + txtColor + ";border-bottom: 1px solid " + txtColor + ";'>" + HTMLmessage + "</div>");
