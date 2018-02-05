@@ -1,8 +1,8 @@
 #nav-bar {
-  height: 80px;
-  width: 100%;
   background-color: #00a087;
+  height: 80px;
   padding: 0 2em 0 2em;
+  width: 100%;
 }
 
 #nav-bar .logo {
@@ -14,27 +14,27 @@
 
 #nav-bar .header {
   float: left;
-  padding: 10px;
-  line-height: 175%;
-  justify-content: center;
   font-size: 200%;
   font-style: color #e8fdff;
+  justify-content: center;
+  line-height: 175%;
+  padding: 10px;
 }
 
 #nav-bar button {
-  float: right;
-  width: 140px;
-  height: 60px;
-  font-size: 1.5em;
-  color: #00a087;
+  background-color: #caf3e5;
   border: solid black 1.7px;
   border-radius: 4px;
-  background-color: #caf3e5;
+  color: #00a087;
+  float: right;
+  font-size: 1.5em;
+  height: 60px;
   margin-top: 10px;
+  width: 140px;
 }
 
 #nav-bar button:hover {
   color: black;
-  background-color: white;
   cursor: pointer;
+  background-color: white;
 }
